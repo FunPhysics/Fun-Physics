@@ -1,4 +1,16 @@
-exports.default = function (req, res, next) {
-    const { username, password } = req.body;
+const { User } = require("../../Models");
 
-}
+exports.default = async function (req, res, next) {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) throw new Error("missed required params");
+
+    const userData = await User.login(email, password);
+    req.session.user = userData;
+
+    res.status(200).send({ sucess: true });
+  } catch (e) {
+    next(e);
+  }
+};

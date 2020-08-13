@@ -10,9 +10,9 @@ exports.default = async function (req, res, next) {
 
     if (!email || !password || !first_name || !last_name) throw new Error("missed required params");
 
-    const newUser = new User(req.body);
-    const data = await newUser.save();
-    res.status(200).send({ sucess: true, data: data.rows });
+    await User.register(email, password, first_name, last_name);
+
+    res.status(200).send({ sucess: true });
   } catch (e) {
     next(e);
   }
