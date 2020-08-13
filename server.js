@@ -7,6 +7,11 @@ require("dotenv").config();
 
 const app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false,
+}));
+
 const { pgPool } = require("./databaseConnection");
 
 app.use(session({
@@ -18,11 +23,6 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 }, // 30 days
-}));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: false,
 }));
 
 // set public
@@ -50,6 +50,10 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+const authRoute = require("./Routes/auth").default;
+
+app.use("/auth", authRoute);
+
 // page not found middleware
 app.all("*", (req, res) => {
   res.status(404).send({ msg: "Sorry, page not found !" });
@@ -57,7 +61,8 @@ app.all("*", (req, res) => {
 
 // error middleware
 app.use((err, req, res, next) => { // eslint-disable-line
-  res.status(500).render("pages/error", { error: err });
+  res.status(500).send({ msg: err.message });
+  // res.status(500).render("pages/error", { error: err });
 });
 
 const PORT = process.env.PORT || 3000;

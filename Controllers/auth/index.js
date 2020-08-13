@@ -1,2 +1,2 @@
-export { default as login } from "./login";
-export { default as register } from "./register";
+exports.login = require("./login").default;
+exports.register = require("./register").default;
