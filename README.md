@@ -15,11 +15,21 @@ Fun physics website which provides scientific content simplifying physics in man
 # Users Storis
 
 1. As a user i want to login to my own account and ne able to contribute by adding articles to the website.
+-data base to contain the user info
+- authintication for the user
+-opening a new session for each user.
 2.As a user i want to search for intresting topics in the universe and view them as images to fulfuil my curuosity for the mystic and the unknown .
-3. As a user i want to be able to ask the community of the website scintfic questions and hear there answers and feedback .
+- when the user chooses a keyword and click explore it will get data from the api and add them to the database.
+-then it render them to the page .
+3. As a user i want to be able to ask the community of the website scientfic questions and hear there answers and feedback .
+1. a form for the question that addes it a database for the questions .
+2. then  it renders the questions in the q and a page where people can submit answers
+3. people can answer questions and those questions will be added to a tbale for answers in the data base.
 4. As a user i want to view the contributors that are adding articles and learn about them .
+each user photo and bio will be displayed in the contributors
 
-[Wireframe](https://drive.google.com/file/d/17-oWQkSGUTpcuB3A-czMKpBr9HzaakkK/view?usp=sharing)
 
-[Entity Relationship](https://drive.google.com/file/d/1hsUlPIXeo6V6jNn4O-6JDtO7iTjS1CyW/view?usp=sharing)
+## [Wireframe](https://drive.google.com/file/d/17-oWQkSGUTpcuB3A-czMKpBr9HzaakkK/view?usp=sharing)
+
+## [Entity Relationship](https://drive.google.com/file/d/1hsUlPIXeo6V6jNn4O-6JDtO7iTjS1CyW/view?usp=sharing)
 
