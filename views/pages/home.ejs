@@ -1,0 +1,19 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if (user) { %>
+      your welcome <%= user.email %>
+      to <a href="/auth/logout">logout</a>
+    <% } else { %>
+      you are not logged in
+      <br>
+      please <a href="/login">Login</a>
+      <br>
+      or your are welcome <a href="/register">Register</a>
+      <% } %>
+  </body>
+</html>

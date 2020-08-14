@@ -12,7 +12,9 @@ exports.default = async function (req, res, next) {
 
     await User.register(email, password, first_name, last_name);
 
-    res.status(200).send({ sucess: true });
+    const userData = await User.login(email, password);
+    req.session.user = userData;
+    res.redirect("/");
   } catch (e) {
     next(e);
   }

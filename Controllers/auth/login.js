@@ -8,8 +8,7 @@ exports.default = async function (req, res, next) {
 
     const userData = await User.login(email, password);
     req.session.user = userData;
-
-    res.status(200).send({ sucess: true });
+    res.redirect("/");
   } catch (e) {
     next(e);
   }

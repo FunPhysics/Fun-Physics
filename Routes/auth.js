@@ -13,6 +13,6 @@ router.get("/", (req, res) => {
 });
 router.post("/login", authContoller.login);
 router.post("/register", authContoller.register);
-router.delete("/logout", authContoller.logout);
+router.get("/logout", authContoller.logout); // to call it from href
 
 exports.default = router;
