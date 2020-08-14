@@ -3,8 +3,7 @@ exports.default = async function (req, res, next) {
     if (req.session) {
       req.session.destroy();
     }
-
-    res.status(200).send({ sucess: true });
+    res.redirect("/");
   } catch (e) {
     next(e);
   }
