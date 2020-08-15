@@ -46,11 +46,13 @@ app.all("*", (req, res, next) => {
   next();
 });
 
-const renderRoutes = require("./Routes/render").default;
-const authRoute = require("./Routes/auth").default;
+const renderRouter = require("./Routers/render").default;
+const authRouter = require("./Routers/auth").default;
+const questionRouter = require("./Routers/questions").default;
 
-app.use("/", renderRoutes);
-app.use("/auth", authRoute);
+app.use("/", renderRouter);
+app.use("/auth", authRouter);
+app.use("/questions", questionRouter);
 
 // page not found middleware
 app.all("*", (req, res) => {
