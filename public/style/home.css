@@ -141,7 +141,7 @@ li a:hover{
    border-radius: 15px;
     width: 50%;
     height: 540px;
-    margin:10px;
+    margin:3% 2% 4% 0%;
      box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
    /* background-color: #cec4de; */
     background-color: white;
@@ -195,7 +195,42 @@ li a:hover{
     border-radius: 6px;
 }
 .article-preview{
-    background-color: yellow;
+    border-radius: 15px;
     width: 50%;
     height: 540px;
+    margin:3% 5% 4% 5%;
+     box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
+   /* background-color: #cec4de; */
+    background-color: white;
 }
+.article-preview div{
+    width: 90%;
+    height: 200px;
+    background-color: yellow;
+    display: flex;
+  
+   
+}
+.article-preview div img{
+    width:30%;
+    height: 100%;
+    
+}
+.sub-article-div{
+    flex-direction: column;
+/* .sub-article{
+    display: flex;
+    flex-direction: column;
+   
+}
+.sub-article h2{
+    background-color: teal;
+    margin: 2%;
+    
+}
+.sub-article p{
+    height: 70px;
+    overflow: hidden;
+    background-color: white;
+    margin: 2%;
+} */
