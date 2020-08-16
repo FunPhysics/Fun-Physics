@@ -48,9 +48,11 @@ app.all("*", (req, res, next) => {
 
 const renderRoutes = require("./Routes/render").default;
 const authRoute = require("./Routes/auth").default;
+const spaceRouter = require("./explore-space/space").default;
 
 app.use("/", renderRoutes);
 app.use("/auth", authRoute);
+app.use("/space", spaceRouter);
 
 // page not found middleware
 app.all("*", (req, res) => {
