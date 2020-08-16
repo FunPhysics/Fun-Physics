@@ -1,19 +1,149 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Home</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css2?family=Faster+One&family=Roboto:wght@700&display=swap' rel="stylesheet">
   </head>
+  
   <body>
-    <% if (user) { %>
-      your welcome <%= user.email %>
-      to <a href="/auth/logout">logout</a>
-    <% } else { %>
-      you are not logged in
-      <br>
-      please <a href="/login">Login</a>
-      <br>
-      or your are welcome <a href="/register">Register</a>
-      <% } %>
-  </body>
+    <header>
+      <div id='top-section'>
+        <!-- <div id="logo">
+          <img src="../images/logo2.png" alt="oops">
+          <h1>Fun Physics</h1>
+  
+        </div> 
+    -->
+        <div id="login">
+          <% if (user) { %>
+            you're welcome <%= user.email %>
+            to <a class="login" href="/auth/logout">logout</a>
+          <% } else { %>
+           
+            
+           <a class="login" href="/login">Login</a>
+            <br>
+             <a class="login" href="/register">Sign up</a>
+            <% } %>
+        </div>
+      </div>
+      
+      <nav>
+        <ul>
+          <li>
+            
+            <a href="#">  Home</a>
+          </li>
+          <li>
+            <a href="#"> Articles</a>
+           
+          </li>
+          <li>
+            <a href="#"> Explore space</a>
+          
+          </li>
+          <li>
+            <a href="#"> Q&A</a>
+            
+          </li>
+          <li>
+            <a href="#"> Contributors</a>
+            
+          </li>
+          <li>
+            <a href="#"> Contribute with us </a>
+           
+          </li>
+          <li>
+            <a href="#"> Contact us</a>
+            
+          </li>
+        </ul>
+      </nav>
+   
+    </header>
+    <main>
+      <div id="space">
+
+      </div>
+      <div id="site-name">
+        <span>
+          Fun Physics
+        </span>
+      </div>
+      <div class="CSSgal">
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s1"></s> 
+        <s id="s2"></s>
+        <s id="s3"></s>
+        <s id="s4"></s>
+      
+        <div class="slider">
+          <div >
+            <img src="../images/s1.jpg" alt="" srcset="">
+          </div>
+          <div >
+            <img src="../images/s2.jpg" alt="" srcset="">
+          </div>
+          <div >
+            <img src="../images/s3.jpg" alt="" srcset="">
+          </div>
+          <div >
+            <img src="../images/s4.jpg" alt="" srcset="">
+          </div>
+        </div>
+        
+        <div class="prevNext">
+          <div><a href="#s4"></a><a href="#s2"></a></div>
+          <div><a href="#s1"></a><a href="#s3"></a></div>
+          <div><a href="#s2"></a><a href="#s4"></a></div>
+          <div><a href="#s3"></a><a href="#s1"></a></div>
+        </div>
+      
+        <div class="bullets">
+          <a href="#s1">1</a>
+          <a href="#s2">2</a>
+          <a href="#s3">3</a>
+          <a href="#s4">4</a>
+        </div>
+      
+      </div>
+      <div id="articls-section">
+        <div class="clearfixed" id="wrapper" >
+          
+              <article>
+                <section id="sec1">
+                  <header>
+                    <h2>Article</h2>
+                  </header>
+                  <img src="../images/s1.jpg" alt="" style="width:125px;height:125px">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo vero perspiciatis aliquid impedit eveniet libero eius, pariatur distinctio id ad! Unde repudiandae incidunt ut laudantium nisi dolor illum fugiat ullam!</p>	
+                	
+                  <!-- <h4 id="banner">Available</h4>
+                   </section><br>
+                    <section id="sec2">
+                      <header class="headers">Specifications</header>
+                      <p class="">
+          </p><p class=""></p>
+                      </p> -->
+                  <footer></footer>
+                    </section>
+                    
+              </article>
+
+      </div>
+     
+    </main>
+    
+    
+ 
+   
+   </body>
+
 </html>
