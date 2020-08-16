@@ -24,4 +24,9 @@ Article.findById = function (id) {
   return doQuery("select * from articles where id = $1; ", params);
 };
 
+Article.findByAuthorId = function (id) {
+  const params = [id];
+  return doQuery("select * from articles where author_id = $1; ", params);
+};
+
 exports.default = Article;

@@ -50,11 +50,15 @@ const renderRouter = require("./Routers/render").default;
 const authRouter = require("./Routers/auth").default;
 const questionRouter = require("./Routers/questions").default;
 const articlesRouter = require("./Routers/articles").default;
+const clappedArticlesRouter = require("./Routers/clappedArticles").default;
+const usersRouter = require("./Routers/users").default;
 
 app.use("/", renderRouter);
 app.use("/auth", authRouter);
 app.use("/questions", questionRouter);
 app.use("/articles", articlesRouter);
+app.use("/clappedArticles", clappedArticlesRouter);
+app.use("/users", usersRouter);
 
 // page not found middleware
 app.all("*", (req, res) => {
