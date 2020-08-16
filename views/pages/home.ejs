@@ -1,85 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="../style/reset.css">
-    <link rel="stylesheet" href="../style/home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css2?family=Faster+One&family=Roboto:wght@700&display=swap' rel="stylesheet">
-  </head>
-  
-  <body>
-    <header>
-      <div id='top-section'>
-        
-   
-        <div id="login">
-          <% if (user) { %>
-            you're welcome <%= user.email %>
-            to <a class="login" href="/auth/logout">logout</a>
-          <% } else { %>
-           
-            
-           <a class="login" href="/login">Login</a>
-            <br>
-             <a class="login" href="/register">Sign up</a>
-            <% } %>
-        </div>
-      </div>
-      
-      <nav>
-        <ul>
-          <li>
-            
-            <a href="#">  Home</a>
-          </li>
-          <li>
-            <a href="#"> Articles</a>
-           
-          </li>
-          <li>
-            <a href="#"> Explore space</a>
-          
-          </li>
-          <li>
-            <a href="#"> Q&A</a>
-            
-          </li>
-          <li>
-            <a href="#"> Contributors</a>
-            
-          </li>
-          <li>
-            <a href="#"> Contribute with us </a>
-           
-          </li>
-          <li>
-            <a href="#"> Contact us</a>
-            
-          </li>
-        </ul>
-      </nav>
-      <div id="logo">
-        <img src="../images/atom.gif" alt="oops" >
-        <h1>Fun Physics</h1>
-        
-      </div> 
-   
-    </header>
-    <main>
-      <nav id="daily-image">
-        <img src="../images/cover10.jpg" alt="">
-      </nav>
-    
-     
-    </main>
-    
-    
-    
- 
-   
-   </body>
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <header>
+    <%- include('../partials/header') %>
+  </header>
+  <main>
+    <nav id="daily-image">
+      <img src="../images/cover10.jpg" alt="">
+    </nav>
+    <section class="home-body">
+      <section class="card-article">
+        <h1>article Title</h1>
+        <hr>
+
+        <img src="../images/cover.jpg" alt="" srcset="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis deserunt sunt cupiditate, minus, ad
+          consequatur quaerat non obcaecati eaque illo nisi nam nihil minima similique doloribus enim unde? Expedita,
+          ut?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis deserunt sunt cupiditate, minus, ad
+          consequatur quaerat non obcaecati eaque illo nisi nam nihil minima similique doloribus enim unde? Expedita,
+          ut?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis deserunt sunt cupiditate, minus, ad
+          consequatur quaerat non obcaecati eaque illo nisi nam nihil minima similique doloribus enim unde? Expedita,
+          ut?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis deserunt sunt cupiditate, minus, ad
+          consequatur quaerat non obcaecati eaque illo nisi nam nihil minima similique doloribus enim unde? Expedita,
+          ut?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis deserunt sunt cupiditate, minus, ad
+          consequatur quaerat non obcaecati eaque illo nisi nam nihil minima similique doloribus enim unde? Expedita,
+          ut?
+        </p>
+        <h3>author Name </h3>
+        <a href="/detalis">Show Detalis</a>
+      </section>
+
+      <section class="article-preview">
+
+      </section>
+
+    </section>
+  </main>
+
+
+
+
+
+</body>
 
 </html>

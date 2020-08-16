@@ -1,0 +1,54 @@
+<div id='top-section'>
+        
+   
+    <div id="login">
+      <% if (user) { %>
+        you're welcome <%= user.email %>
+        to <a class="login" href="/auth/logout">logout</a>
+      <% } else { %>
+       
+        
+       <a class="login" href="/login">Login</a>
+        <br>
+         <a class="login" href="/register">Sign up</a>
+        <% } %>
+    </div>
+  </div>
+  
+  <nav>
+    <ul>
+      <li>
+        
+        <a href="#">  Home</a>
+      </li>
+      <li>
+        <a href="#"> Articles</a>
+       
+      </li>
+      <li>
+        <a href="#"> Explore space</a>
+      
+      </li>
+      <li>
+        <a href="#"> Q&A</a>
+        
+      </li>
+      <li>
+        <a href="#"> Contributors</a>
+        
+      </li>
+      <li>
+        <a href="#"> Contribute with us </a>
+       
+      </li>
+      <li>
+        <a href="#"> Contact us</a>
+        
+      </li>
+    </ul>
+  </nav>
+  <div id="logo">
+    <img src="../images/atom.gif" alt="oops" >
+    <h1>Fun Physics</h1>
+    
+  </div> 
