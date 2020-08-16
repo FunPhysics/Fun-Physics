@@ -49,10 +49,12 @@ app.all("*", (req, res, next) => {
 const renderRouter = require("./Routers/render").default;
 const authRouter = require("./Routers/auth").default;
 const questionRouter = require("./Routers/questions").default;
+const articlesRouter = require("./Routers/articles").default;
 
 app.use("/", renderRouter);
 app.use("/auth", authRouter);
 app.use("/questions", questionRouter);
+app.use("/articles", articlesRouter);
 
 // page not found middleware
 app.all("*", (req, res) => {
