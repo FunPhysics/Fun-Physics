@@ -31,5 +31,5 @@ each user photo and bio will be displayed in the contributors
 
 ## [Wireframe](https://drive.google.com/file/d/17-oWQkSGUTpcuB3A-czMKpBr9HzaakkK/view?usp=sharing)
 
-## [Entity Relationship](https://drive.google.com/file/d/1hsUlPIXeo6V6jNn4O-6JDtO7iTjS1CyW/view?usp=sharing)
+## [Entity Relationship](https://drive.google.com/file/d/1VGlPMthapygIvDAokvPg4gKNfAjf0nOH/view?usp=sharing)
 
