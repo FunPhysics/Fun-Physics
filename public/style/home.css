@@ -204,13 +204,15 @@ li a:hover{
      box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
    /* background-color: #cec4de; */
    background-color: white;
+   
+   box-sizing: content-box;
     
     
 }
 .article-preview div{
     width: 90%;
     height: 200px;
-    background-color: yellow;
+    
     display: flex;
     box-sizing: content-box;
     overflow: hidden;
@@ -221,14 +223,16 @@ li a:hover{
    
 }
 .article-preview div img{
-    width:30%;
-    height: 100%;
+    width: 100%;;
+    height: 80%;
     
 }
 
  .sub-article{
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
    
 }
 .sub-article h2{
@@ -255,9 +259,8 @@ li a:hover{
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
      /* background-color: rgba(255, 2525 2525 0.25); */
-     background-image: url(cover3.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
@@ -290,16 +293,17 @@ li a:hover{
   font-weight: 700;
   font-size: larger;
   font-family: 'Cabin Sketch', cursive;
+  border: 10px white ridge;
+  padding: 15px;
   }
   #regBtn {
   
       border-radius: 5px;
       background-color: rgba(255, 2525 2525 0.25);
-      color: white;
-      background-image: url(cover3.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
+      color:black;
+     
       padding: 8px;
+      width: 160px;
   }
 
   #login-card{
@@ -313,9 +317,8 @@ li a:hover{
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
      /* background-color: rgba(255, 2525 2525 0.25); */
-     background-image: url(cover3.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
+     background: rgb(238,174,202);
+     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
@@ -348,16 +351,56 @@ li a:hover{
   font-weight: 700;
   font-size: larger;
   font-family: 'Cabin Sketch', cursive;
+  border: 10px white ridge;
+  padding: 15px;
+  border-radius: 10;
   }
   #loginBtn {
   
       border-radius: 5px;
       background-color: rgba(255, 2525 2525 0.25);
-      color: white;
-      background-image: url(cover3.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
+      
+      color:black;
+     
       padding: 8px;
+      width: 160px;
+  }
+
+  #add-div {
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      margin:auto;
+
+  }
+  #add-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px -15px 20px rgb(3 6 58 / 55%);
+  }
+  #add-form{
+      display: flex;
+      padding: 40px;
+      
+      
+  }
+  #add-left{
+      display: flex;
+      flex-direction: column;
+      padding-right: 30px;
+      justify-content: space-between;
+      text-align: center;
+      
   }
   .add-article{
     width: 15%;
@@ -442,4 +485,11 @@ li a:hover{
     background-color: #54C0F1;
     border-radius: 5%;
 
+
 }
+
+  #add-left *{
+      margin-top: 15px;
+      border-radius: 5px;
+  }
+
