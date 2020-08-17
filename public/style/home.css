@@ -364,4 +364,45 @@ li a:hover{
       width: 160px;
   }
 
+  #add-div {
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      margin:auto;
+
+  }
+  #add-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px -15px 20px rgb(3 6 58 / 55%);
+  }
+  #add-form{
+      display: flex;
+      padding: 40px;
+      
+      
+  }
+  #add-left{
+      display: flex;
+      flex-direction: column;
+      padding-right: 30px;
+      justify-content: space-between;
+      text-align: center;
+      
+  }
+
+  #add-left *{
+      margin-top: 15px;
+      border-radius: 5px;
+  }
   
