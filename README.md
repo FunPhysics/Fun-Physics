@@ -52,7 +52,7 @@ POST /articles var payload = { title, description } return res.status(201);
 ```
 ### clappedArticles
 ```javascript
-GET /clappedArticles/userId/:id var payload = { } return [clappedArticles[user_id=id]];
+GET /clappedArticles/userId/:id var payload = { } return [clapped_articles[user_id=id]];
 
 POST /clappedArticles/userId/:id var payload = { article_id } res.status(201);
 ```
@@ -66,6 +66,14 @@ GET /questions/:id/answers var payload = {} return { question_answers[question_i
 POST /questions var payload = { content } return res.status(201);
 POST /questions/:id/answers var payload = { content } return res.status(201);
 ```
+
+### space
+```javascript
+GET /space/ var payload = { } return [];
+
+GET /space/keywords var payload = { } return [keywords];
+```
+
 
 ### user
 ```javascript
