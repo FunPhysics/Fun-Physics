@@ -14,31 +14,31 @@ router.get("/user", (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  const mostBookRows = await ClappedArticle.findMostClappedBook();
-  const recentBooksRows = await Article.findRecentBooks();
-  res.status(200).render("pages/home", { user: req.session.user, mostBook: mostBookRows.rows[0], recentBooks: recentBooksRows.rows });
+  const mostArticleRows = await ClappedArticle.findMostClappedArticle();
+  const recentArticleRows = await Article.findRecentArticles();
+  res.status(200).render("pages/home", { user: req.session.user, mostArticle: mostArticleRows.rows[0], recentArticles: recentArticleRows.rows });
 });
 
-router.get("/login", (req, res) => {
+router.get("/Login", (req, res) => {
   res.status(200).render("pages/login", { user: req.session.user });
 });
 
-router.get("/register", (req, res) => {
+router.get("/Register", (req, res) => {
   res.status(200).render("pages/register", { user: req.session.user });
 });
 router.get("/Add-Article", (req, res) => {
   res.status(200).render("pages/Add", { user: req.session.user });
 });
-
-router.get("/articles", (req, res) => {
-  res.status(200).render("pages/articles", { user: req.session.user });
+router.get("/Articles", async (req, res) => {
+  const articles = await Article.find();
+  res.status(200).render("pages/articles", { user: req.session.user, articles: articles.rows });
 });
 
-router.get("/details/:id", (req, res) => {
+router.get("/Details/:id", (req, res) => {
   res.status(200).render("pages/details", { user: req.session.user });
 });
 
-router.get("/explorespace", (req, res) => {
+router.get("/Explorespace", (req, res) => {
   res.status(200).render("pages/explore-space", { user: req.session.user });
 });
 
