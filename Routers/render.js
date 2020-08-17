@@ -16,11 +16,11 @@ router.get("/", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  res.status(200).render("pages/login");
+  res.status(200).render("pages/login", { user: req.session.user });
 });
 
 router.get("/register", (req, res) => {
-  res.status(200).render("pages/register");
+  res.status(200).render("pages/register", { user: req.session.user });
 });
 
 exports.default = router;
