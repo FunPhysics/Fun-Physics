@@ -52,6 +52,7 @@ const questionRouter = require("./Routers/questions").default;
 const articlesRouter = require("./Routers/articles").default;
 const clappedArticlesRouter = require("./Routers/clappedArticles").default;
 const usersRouter = require("./Routers/users").default;
+const spaceRouter = require("./explore-space/space").default;
 
 app.use("/", renderRouter);
 app.use("/auth", authRouter);
@@ -59,6 +60,7 @@ app.use("/questions", questionRouter);
 app.use("/articles", articlesRouter);
 app.use("/clappedArticles", clappedArticlesRouter);
 app.use("/users", usersRouter);
+app.use("/space", spaceRouter);
 
 // page not found middleware
 app.all("*", (req, res) => {

@@ -1,14 +1,14 @@
 # Fun-Physics
 
-Team Members: 
+Team Members:
 
-1-Hidaya Abd Al-Aziz Syam 
+1-Hidaya Abd Al-Aziz Syam
 
-2- Adnan Ahmed Abumuammer 
+2- Adnan Ahmed Abumuammer
 
-3- Waleed Jeries Farraj 
+3- Waleed Jeries Farraj
 
-4-Duha Mahmoud Salah 
+4-Duha Mahmoud Salah
 
 Fun physics website which provides scientific content simplifying physics in many ways for everyone including students from various levels of education . in this day and age where learning was moved to the cyber world we strive to provide a simple and fun source for learning about physics and astronomy as the main focus of the site. It fulfils the need of scientific  data and the lack of scientific-educational content  and presents it in a  simplified way and provide updated information about astronomy
 
@@ -33,3 +33,41 @@ each user photo and bio will be displayed in the contributors
 
 ## [Entity Relationship](https://drive.google.com/file/d/1VGlPMthapygIvDAokvPg4gKNfAjf0nOH/view?usp=sharing)
 
+## Api documentation
+
+### authintication
+```javascript
+POST /auth/login var payload = { email, password } return res.render("/"); // return to home if success
+POST /auth/register var payload = { email, password, first_name, last_name } return res.render("/");
+GET /auth/logout var payload = {} return res.render("/"); // return to home if success
+```
+
+### articles
+```javascript
+GET /articles var payload = { } return [articles];
+GET /articles/:id var payload = { } return [articles[id]];
+GET /articles/userId/:id var payload = {} return { articles[id=author_id] }
+
+POST /articles var payload = { title, description } return res.status(201);
+```
+### clappedArticles
+```javascript
+GET /clappedArticles/userId/:id var payload = { } return [clappedArticles[user_id=id]];
+
+POST /clappedArticles/userId/:id var payload = { article_id } res.status(201);
+```
+
+### questions
+```javascript
+GET /questions var payload = { } return [questions];
+GET /questions/:id var payload = { } return [questions[id]];
+GET /questions/:id/answers var payload = {} return { question_answers[question_id=id] }
+
+POST /questions var payload = { content } return res.status(201);
+POST /questions/:id/answers var payload = { content } return res.status(201);
+```
+
+### user
+```javascript
+GET /user/me var payload = { } return req.session.user;
+```
