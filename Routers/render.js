@@ -23,4 +23,8 @@ router.get("/register", (req, res) => {
   res.status(200).render("pages/register", { user: req.session.user });
 });
 
+router.get("/articles", (req, res) => {
+  res.status(200).render("pages/articles", { user: req.session.user });
+});
+
 exports.default = router;
