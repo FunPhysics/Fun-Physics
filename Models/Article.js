@@ -17,7 +17,7 @@ Article.prototype.save = function () {
 };
 
 Article.find = function () {
-  return doQuery("select * from articles inner join users on articles.author_id = users.id;");
+  return doQuery("select * from articles inner join users on articles.author_id = users.id order by articles.id desc;");
 };
 
 Article.findById = function (id) {
