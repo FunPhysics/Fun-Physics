@@ -9,9 +9,7 @@
 main{
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
-
-}
+  }
 
 header{
   
@@ -375,6 +373,10 @@ li a:hover{
       text-align: center;
       min-height: 100vh;
       margin:auto;
+      /* background-image: url("../images/form2.jpg"); */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../images/form3.jpg");
 
   }
   #add-article {
@@ -383,14 +385,17 @@ li a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: blueviolet;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px -15px 20px rgb(3 6 58 / 55%);
+    width: 70%;
+    height: 500px;
   }
   #add-form{
       display: flex;
       padding: 40px;
+      width: 80%;
       
       
   }
@@ -485,7 +490,6 @@ li a:hover{
     background-color: #54C0F1;
     border-radius: 5%;
 
-
 }
 
   #add-left *{
@@ -493,3 +497,84 @@ li a:hover{
       border-radius: 5px;
   }
 
+#article-area{
+    width: 130%;
+    height: 110%;
+}
+.input-from
+{
+    width: 110%;
+    height: 21%;
+    margin: 5% 4% 4% -30%;
+}
+#publish-btn{
+    width: 30%;
+    height: 20%;
+    margin:37% 4% 4% -38%;
+    background-color:#74d623 ;
+}
+.category{
+
+    background-color: yellow;
+    /* width: ; */
+    height: 60px;
+}
+#category{
+    margin: auto;
+    display: block;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.api-div{
+    background: rgb(255, 255, 255);
+    border-radius: 2%;
+    margin: 2%;
+  }
+ /* .articles-section ul{
+      width: 100%;
+      height: 100%;
+  }
+  .articles-section ul li{
+      height: 30%;
+  }
+   */
+   .api-div img{
+    width: 90%;
+    height: 45%;
+    margin: 2% 5% 2% 5%;
+    align-items: center;
+
+  }
+  .api-div{
+    border-radius: 15px;
+    width: 25%;
+    height: 400px;
+    margin:4% 2% 4% 5%;
+     box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
+   /* background-color: #cec4de; */
+    background-color: white;
+    float: left;
+
+  }
+
+  .api-div h1{
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    color:#d62374 ;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.api-div p{
+    font-size: 18px;
+    font-family: 'Delius', cursive;
+
+    margin: 3px 25px 0px 25px;
+   
+    height: 135px;
+    overflow: hidden;
+}

@@ -30,4 +30,7 @@ router.get("/articles", (req, res) => {
   res.status(200).render("pages/articles", { user: req.session.user });
 });
 
+router.get("/explorespace", (req, res) => {
+  res.status(200).render("pages/explore-space", { user: req.session.user });
+});
 exports.default = router;
