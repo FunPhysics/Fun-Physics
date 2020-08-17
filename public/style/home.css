@@ -598,18 +598,31 @@ border-radius: 50%;
 
   .category{
 
-    background-color: yellow;
+    background-color: white;
     /* width: ; */
     height: 60px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}
+.categort select {
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
 }
 #category{
     margin: auto;
     display: block;
-    width: 30%;
+    width: 20%;
     height: 100%;
     border-radius: 5px;
-    border: none;
+
+    border: white;
+    font: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
+
 
 .api-div{
     background: rgb(255, 255, 255);
@@ -645,7 +658,7 @@ border-radius: 50%;
 
   .api-div h1{
     height: 30px;
-    font-size: 35px;
+    font-size: 20px;
     text-align: center;
     color:#d62374 ;
     font-family: 'Nunito', sans-serif;
@@ -660,6 +673,9 @@ border-radius: 50%;
 
     height: 135px;
     overflow: hidden;
+}
+.api-div h3 {
+    text-align: center;
 }
 /* ========================================================== */
 #likes-container {
