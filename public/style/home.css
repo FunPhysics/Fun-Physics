@@ -655,3 +655,16 @@ border-radius: 50%;
     height: 135px;
     overflow: hidden;
 }
+/* ========================================================== */
+#likes-container {
+    visibility: hidden;
+}
+#articleMain .icon{
+    visibility: visible;
+}
+#articleMain .icon:hover{
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+    
+}
