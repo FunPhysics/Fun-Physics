@@ -1,13 +1,18 @@
 <div id='top-section'>
         
    
-    <div id="login">
+   
       <% if (user) { %>
-        you're welcome <%= user.email %>
-        to <a class="login" href="/auth/logout">logout</a>
+      <div id="welcome">
+        
+          you're welcome <%= user.first_name+" "+user.last_name
+          %> 
+           <a class="login" href="/auth/logout">logout</a>
+      </div>
+      
       <% } else { %>
        
-        
+        <div  id="login">
        <a class="login" href="/login">Login</a>
         <br>
          <a class="login" href="/register">Sign up</a>

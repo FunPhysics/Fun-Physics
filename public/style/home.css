@@ -9,10 +9,12 @@
 main{
     display: flex;
     flex-direction: column;
-  }
+
+
+}
 
 header{
-  
+
     width: 100%;
     height: 75px;
     display: flex;
@@ -40,6 +42,24 @@ header{
     width: 100px;
     height: 75px;
     align-self: center;
+}
+#welcome{
+    align-self: center;
+    font-family: 'Righteous', cursive;
+    font-size: 18px;
+    padding: 5px;
+    color: #d62374;
+    border :2px solid white;
+    display: inline-block;
+    border-radius: 5px;
+
+
+}
+#top-section{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
 }
 #login{
     margin-top:15px;
@@ -80,12 +100,7 @@ li a {
 
 
 }
-main{
-   
-   
-    background-color:white;
-    
-}
+
 li a:hover{
     color:	black;
 }
@@ -124,11 +139,11 @@ li a:hover{
     text-align: center;
 }
 #daily-image img {
- 
+
     height: 100%;
     width: 100%;
-   
-   
+
+
 
 }
 .home-body{
@@ -145,32 +160,35 @@ li a:hover{
      box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
    /* background-color: #cec4de; */
     background-color: white;
-    
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+
+
+
 }
 .card-article h1{
     height: 50px;
     font-size: 35px;
-    text-align: center;
+   text-align: center;
     line-height: 2;
     color:#d62374 ;
     font-family: 'Cabin Sketch', cursive;
 
 }
 .card-article img{
-    height: 225px;
-    margin: 0px 20px 20px 35px;
-    padding: 3px;
-    width: 90%;
-}
-.card-article p{
-    font-size: 18px;
-    font-family: 'Delius', cursive;
 
-    margin: 3px 25px 0px 25px;
-   
-    height: 135px;
-    overflow: hidden;
+    float: left;
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+    margin-right:15px;
+    margin-left: 15px;
+
+
 }
+
 
 .card-article h3{
     text-align: center;
@@ -190,9 +208,16 @@ li a:hover{
     border :2px solid white;
     padding: 8px;
     text-align: center;
-    margin-left:44% ;
+
     height: 30px;
     border-radius: 6px;
+}
+
+#image-container{
+ height: 250px;
+width: 250px;
+float: left;
+border-radius: 50%;
 }
 .article-preview{
     border-radius: 15px;
@@ -202,28 +227,41 @@ li a:hover{
      box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
    /* background-color: #cec4de; */
    background-color: white;
-   
+
    box-sizing: content-box;
-    
-    
+   overflow:scroll;
+
+
 }
 .article-preview div{
     width: 90%;
     height: 200px;
-    
+
     display: flex;
     box-sizing: content-box;
     overflow: hidden;
     margin: 5%;
     border-radius: 3px;
-    
-  
-   
+
+
+
 }
+.article-preview div p {
+    font-size: 18px;
+    font-family: 'Delius', cursive;
+    margin: 3px 25px 0px 25px;
+    overflow: hidden;
+
+
+
+
+}
+
 .article-preview div img{
     width: 100%;;
     height: 80%;
-    
+
+
 }
 
  .sub-article{
@@ -231,12 +269,24 @@ li a:hover{
   flex-direction: column;
   justify-items: center;
   align-items: center;
-   
+  padding: 4px;
+
+}
+.sub-article a {
+    padding-bottom: 8px;
+    text-decoration: none;
+    background-color:  #74d623;
+    color: white;
+    width: 100%;
+    text-align: center;
+    justify-items: center;
+
 }
 .sub-article h2{
-    background-color: teal;
-  
-    
+    padding: 3px;
+    background-color: white
+
+
 }
 /*.sub-article p{
     height: 70px;
@@ -245,7 +295,11 @@ li a:hover{
     margin: 2%;}
 } */
 /* ===============================register================= */
+#register-main{
+    background-image:  url("../images/form4.jpg");
+    background-size: 100%;
 
+}
 #register-card{
     display: flex;
     flex-direction: column;
@@ -256,14 +310,13 @@ li a:hover{
       padding: 10px;
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
-     /* background-color: rgba(255, 2525 2525 0.25); */
-      background: rgb(238,174,202);
-      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+     background-color: white;
+
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
       align-items: center;
-  
+
   }
 
   #register-form {
@@ -274,36 +327,41 @@ li a:hover{
       align-items: center;
   }
   #register-form label{
-      font-family: 'Audiowide', cursive;
+      font-family: 'times new roman';
       padding: 5px;
       font-weight: 700;
       font-size: large;
-      color: white;
+      color: #d62374;
       letter-spacing: 2px;
-  
+
   }
   #register-form input{
       border-radius: 5px;
       padding: 4px;
   }
   #register-card h4{
-  color: white;
+  color: #d62374;
   font-weight: 700;
   font-size: larger;
-  font-family: 'Cabin Sketch', cursive;
-  border: 10px white ridge;
+  font-family: 't';
+  border: 10px #d62374 solid;
   padding: 15px;
   }
   #regBtn {
-  
+
       border-radius: 5px;
       background-color: rgba(255, 2525 2525 0.25);
       color:black;
-     
+
       padding: 8px;
       width: 160px;
   }
+/* ======================login================================ */
+#login-main{
+    background-image:  url("../images/form4.jpg");
+    background-size: 100%;
 
+}
   #login-card{
     display: flex;
     flex-direction: column;
@@ -314,14 +372,13 @@ li a:hover{
       padding: 10px;
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
-     /* background-color: rgba(255, 2525 2525 0.25); */
-     background: rgb(238,174,202);
-     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+     background-color: white;
+
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
       align-items: center;
-  
+
   }
 
   #login-form {
@@ -332,40 +389,40 @@ li a:hover{
       align-items: center;
   }
   #login-form label{
-      font-family: 'Audiowide', cursive;
+      font-family: 'times new roman';
       padding: 5px;
       font-weight: 700;
       font-size: large;
-      color: white;
+      color: #d62374;
       letter-spacing: 2px;
-  
+
   }
   #login-form input{
       border-radius: 5px;
       padding: 4px;
   }
   #login-card h4{
-  color: white;
+  color: #d62374;
   font-weight: 700;
   font-size: larger;
-  font-family: 'Cabin Sketch', cursive;
-  border: 10px white ridge;
+  font-family: 't';
+  border: 10px #d62374 solid;
   padding: 15px;
   border-radius: 10;
   }
   #loginBtn {
-  
+
       border-radius: 5px;
       background-color: rgba(255, 2525 2525 0.25);
-      
+
       color:black;
-     
+
       padding: 8px;
       width: 160px;
   }
-
+/* =========================================Add Article page ===================== */
   #add-div {
-      
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -373,10 +430,10 @@ li a:hover{
       text-align: center;
       min-height: 100vh;
       margin:auto;
-      /* background-image: url("../images/form2.jpg"); */
+
+      background-image: url("../images/form4.jpg");
+      background-size: 100%;
       background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url("../images/form3.jpg");
 
   }
   #add-article {
@@ -385,32 +442,43 @@ li a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: white;
+    background-color:white;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px -15px 20px rgb(3 6 58 / 55%);
-    width: 70%;
-    height: 500px;
   }
   #add-form{
       display: flex;
       padding: 40px;
-      width: 80%;
-      
-      
+
+
   }
   #add-left{
       display: flex;
       flex-direction: column;
       padding-right: 30px;
-      justify-content: space-between;
+      justify-content: flex-start;
       text-align: center;
-      
+
+  }
+  #add-right{
+      border-radius: 10px;
+      background-color: wheat;
+  }
+  #add-right img{
+      height: 200px;
+      width: 100px;
+
+  }
+  #publish-btn{
+      background-color: #74d623;
+      color: white;
+      align-self: center;
   }
   .add-article{
     width: 15%;
     height: 15%;
-   
+
     margin: 2% 4% 0% 2%;
     padding: 2%
 
@@ -420,7 +488,7 @@ li a:hover{
     text-align: center;
     padding: 10%;
   }
- 
+
   .articles-section{
     background: rgb(255, 255, 255);
     border-radius: 2%;
@@ -466,7 +534,7 @@ li a:hover{
     font-family: 'Delius', cursive;
 
     margin: 3px 25px 0px 25px;
-   
+
     height: 135px;
     overflow: hidden;
 }
@@ -490,84 +558,10 @@ li a:hover{
     background-color: #54C0F1;
     border-radius: 5%;
 
+
 }
 
   #add-left *{
       margin-top: 15px;
       border-radius: 5px;
   }
-
-#article-area{
-    width: 130%;
-    height: 110%;
-}
-.input-from
-{
-    width: 110%;
-    height: 21%;
-    margin: 5% 4% 4% -30%;
-}
-#publish-btn{
-    width: 30%;
-    height: 20%;
-    margin:37% 4% 4% -38%;
-    background-color:#74d623 ;
-}
-.category{
-
-    background-color: yellow;
-    /* width: ; */
-    height: 60px;
-}
-#category{
-    margin: auto;
-    display: block;
-    width: 30%;
-    height: 100%;
-    border-radius: 5px;
-    border: none;
-}
-
-.api-div{
-    background: rgb(255, 255, 255);
-    border-radius: 2%;
-    margin: 2%;
-  }
- 
-   .api-div img{
-    width: 90%;
-    height: 45%;
-    margin: 2% 5% 2% 5%;
-    align-items: center;
-
-  }
-  .api-div{
-    border-radius: 15px;
-    width: 25%;
-    height: 400px;
-    margin:4% 2% 4% 5%;
-     box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
-   /* background-color: #cec4de; */
-    background-color: white;
-    float: left;
-
-  }
-
-  .api-div h1{
-    height: 30px;
-    font-size: 35px;
-    text-align: center;
-    color:#d62374 ;
-    font-family: 'Nunito', sans-serif;
-
-}
-
-.api-div p{
-    font-size: 18px;
-    font-family: 'Delius', cursive;
-
-    margin: 3px 25px 0px 25px;
-   
-    height: 135px;
-    overflow: hidden;
-}

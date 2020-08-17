@@ -3,10 +3,9 @@
 <head>
   <%- include('../partials/head') %>
   <title>Login</title>
-
   </head>
 
-  <body>
+  <body id="login-main">
     <header>
       <%- include('../partials/header') %>
     </header>
@@ -20,12 +19,19 @@
         <label for="password">password</label>
         <input id="password" type="password" name="password" value="">
         <br/>
+        <b id="errorMessage" style="color:white;background-color: red;"></b>
+        <br/>
         <input id="loginBtn" type="submit" value="login">
       </form>
-   
+
     </nav>
-   
-   
+
+
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const errorMessage = params.get("msg");
+    document.getElementById("errorMessage").innerText = errorMessage;
+    </script>
 
   </body>
 
