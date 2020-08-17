@@ -9,6 +9,8 @@
 main{
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
+
 }
 
 header{
@@ -400,9 +402,94 @@ li a:hover{
       text-align: center;
       
   }
+  .add-article{
+    width: 15%;
+    height: 15%;
+   
+    margin: 2% 4% 0% 2%;
+    padding: 2%
+
+  }
+  .add-article a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10%;
+  }
+ 
+  .articles-section{
+    background: rgb(255, 255, 255);
+    border-radius: 2%;
+    margin: 2%;
+  }
+ /* .articles-section ul{
+      width: 100%;
+      height: 100%;
+  }
+  .articles-section ul li{
+      height: 30%;
+  }
+   */
+   .card-article-section img{
+    width: 90%;
+    height: 45%;
+    margin: 2% 5% 2% 5%;
+    align-items: center;
+
+  }
+  .card-article-section{
+    border-radius: 15px;
+    width: 100%;
+    height: 540px;
+    margin:0% 2% 4% 5%;
+     box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
+   /* background-color: #cec4de; */
+    background-color: white;
+
+  }
+
+  .card-article-section h1{
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    color:#d62374 ;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.card-article-section p{
+    font-size: 18px;
+    font-family: 'Delius', cursive;
+
+    margin: 3px 25px 0px 25px;
+   
+    height: 135px;
+    overflow: hidden;
+}
+
+.card-article-section h2{
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: 	#54C0F1;
+    font-size: 22px;
+    height: 30px;
+    font-weight:bold;
+    padding: 2px;
+    margin: 6px;
+}
+.add{
+    margin-top:-40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: #54C0F1;
+    border-radius: 5%;
+
+
+}
 
   #add-left *{
       margin-top: 15px;
       border-radius: 5px;
   }
-  
+
