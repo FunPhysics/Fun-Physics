@@ -1,4 +1,3 @@
-
 'use strict';
 
 const express = require('express');
@@ -7,7 +6,9 @@ const axios = require('axios');
 
 router.get('/', (req, res) => {
     var SearchName = req.query.SearchName;
-    const url = `https://images-api.nasa.gov/search?q=${SearchName}`;
+    var page = req.query.page;
+
+    const url = `https://images-api.nasa.gov/search?q=${SearchName}&page=${page}`;
     axios.get(url).then(space =>{
         let spaceInfo = [];
         space.data.collection.items.map(element =>{
@@ -21,17 +22,27 @@ router.get('/', (req, res) => {
     })  
 });
 
+// router.get(req, res){
+
+//     let SQL = 'SELECT * FROM keywords WHERE id=$1;';
+//     let {name} = req.body;
+//     client.query(SQL, assignValues).then(output =>{
+
+//         res.render('', {: output.rows[0]});
+//     });
+// };
 
 
 function Space(space){
-this.copyright=space.copyright;
-this.date=space.date_created;
-this.url=space.data.url;
-this.title=space.data.title ;
-this.explanation=space.data.explanation
+this.date=space.data[0].date_created;
+this.url= space.links ? space.links[0].href : 'https://adnan.com';
+this.title=space.data[0].title ;
+this.description=space.data[0].description.substring(0,300);
+
 };
 
 exports.default = router;
+
 
 // ///main rout
 
