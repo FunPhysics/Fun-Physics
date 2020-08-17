@@ -27,12 +27,20 @@
       </section>
 
       <section class="card-article">
+
         <h1><%= mostBook ? mostBook.title : "no clapped books" %></h1>
         <hr>
-        <img src="<%= mostBook ? mostBook.img_url : null %>" alt="" srcset="">
-        <p><%= mostBook ? mostBook.description : null %></p>
-        <h3><%= mostBook ? mostBook.author_first_name : null %>&nbsp<%=  mostBook ? mostBook.author_last_name : null %></h3>
-        <a href='details/<%= mostBook ? mostBook.id : null %>' >Show Detalis</a>
+        <section id="top-article-section">
+          <div id="image-container">
+            <img src="<%= mostBook ? mostBook.img_url : null %>" alt="" srcset="">
+          </div>
+          
+          <p><%= mostBook ? mostBook.description : null %></p>
+          <h3><%= mostBook ? mostBook.author_first_name : null %>&nbsp<%=  mostBook ? mostBook.author_last_name : null %></h3>
+          <a href='details/<%= mostBook ? mostBook.id : null %>' >Show Detalis</a>
+        </section>
+       
+
       </section>
 
 
