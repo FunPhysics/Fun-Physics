@@ -38,4 +38,8 @@ router.get("/details/:id", (req, res) => {
   res.status(200).render("pages/details", { user: req.session.user });
 });
 
+router.get("/explorespace", (req, res) => {
+  res.status(200).render("pages/explore-space", { user: req.session.user });
+});
+
 exports.default = router;
