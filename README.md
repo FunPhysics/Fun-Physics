@@ -67,6 +67,14 @@ POST /questions var payload = { content } return res.status(201);
 POST /questions/:id/answers var payload = { content } return res.status(201);
 ```
 
+### space
+```javascript
+GET /space/ var payload = { } return [];
+
+GET /space/keywords var payload = { } return [keywords];
+```
+
+
 ### user
 ```javascript
 GET /user/me var payload = { } return req.session.user;
