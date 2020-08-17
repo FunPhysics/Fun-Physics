@@ -20,7 +20,12 @@ User.prototype.save = function () {
   return doQuery("INSERT INTO users(email, password, first_name, last_name) values($1,$2,$3,$4) returning id;", params);
 };
 
-User.findUserByEmail = function (email) {
+User.findById = function (id) {
+  const params = [id];
+  return doQuery("select * from users where id = $1; ", params);
+};
+
+User.findByEmail = function (email) {
   const params = [email];
   return doQuery("select * from users where email = $1; ", params);
 };
@@ -45,7 +50,7 @@ User.register = function (email, password, first_name, last_name) {
 
 User.login = function (email, password) {
   return new Promise((resolve, reject) => {
-    User.findUserByEmail(email)
+    User.findByEmail(email)
       .then((result) => {
         if (!result.rows || !result.rows.length) {
           reject(new Error("username or password not correct!"));

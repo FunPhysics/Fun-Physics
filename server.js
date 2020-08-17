@@ -46,12 +46,20 @@ app.all("*", (req, res, next) => {
   next();
 });
 
-const renderRoutes = require("./Routes/render").default;
-const authRoute = require("./Routes/auth").default;
+const renderRouter = require("./Routers/render").default;
+const authRouter = require("./Routers/auth").default;
+const questionRouter = require("./Routers/questions").default;
+const articlesRouter = require("./Routers/articles").default;
+const clappedArticlesRouter = require("./Routers/clappedArticles").default;
+const usersRouter = require("./Routers/users").default;
 const spaceRouter = require("./explore-space/space").default;
 
-app.use("/", renderRoutes);
-app.use("/auth", authRoute);
+app.use("/", renderRouter);
+app.use("/auth", authRouter);
+app.use("/questions", questionRouter);
+app.use("/articles", articlesRouter);
+app.use("/clappedArticles", clappedArticlesRouter);
+app.use("/users", usersRouter);
 app.use("/space", spaceRouter);
 
 // page not found middleware
