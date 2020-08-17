@@ -52,7 +52,7 @@ POST /articles var payload = { title, description } return res.status(201);
 ```
 ### clappedArticles
 ```javascript
-GET /clappedArticles/userId/:id var payload = { } return [clappedArticles[user_id=id]];
+GET /clappedArticles/userId/:id var payload = { } return [clapped_articles[user_id=id]];
 
 POST /clappedArticles/userId/:id var payload = { article_id } res.status(201);
 ```
