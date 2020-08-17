@@ -6,8 +6,8 @@ const articlesController = require("../Controllers/articles");
 const { loginRequired, checkIsSameUser } = require("../Controllers/utils");
 
 router.get("/", articlesController.listArticles);
-router.get("/userId/:id", loginRequired, checkIsSameUser, articlesController.listUserArticles);
 router.get("/:id", articlesController.getArticle);
+router.get("/userId/:id", loginRequired, checkIsSameUser, articlesController.listUserArticles);
 router.post("/", loginRequired, articlesController.createArticle);
 
 exports.default = router;
