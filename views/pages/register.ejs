@@ -11,7 +11,7 @@
     </header>
     <center>
       <nav id="register-card">
-            
+
         <h4>Register</h4>
         <form id="register-form" class="" action="/auth/register" method="post">
           <label for="first_name">first Name</label>
@@ -26,12 +26,21 @@
           <label for="password">password</label>
           <input id="password" type="password" name="password" value="">
           <br/>
+          <b id="errorMessage" style="color:white;background-color: red;"></b>
+          <br/>
           <input id="regBtn" type="submit" value="Register">
         </form>
-  
+
           </nav>
- 
+
   </center>
+
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const errorMessage = params.get("msg");
+  document.getElementById("errorMessage").innerText = errorMessage;
+  </script>
+
 </body>
 
 </html>

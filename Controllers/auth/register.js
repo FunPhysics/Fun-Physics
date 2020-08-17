@@ -2,7 +2,7 @@
 
 const { User } = require("../../Models");
 
-exports.default = async function (req, res, next) {
+exports.default = async function (req, res) {
   try {
     const {
       email, password, first_name, last_name,
@@ -16,6 +16,6 @@ exports.default = async function (req, res, next) {
     req.session.user = userData;
     res.redirect("/");
   } catch (e) {
-    next(e);
+    res.redirect(`${req.url}?msg=${e.message}`);
   }
 };

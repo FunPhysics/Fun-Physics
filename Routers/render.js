@@ -2,6 +2,8 @@ const express = require("express");
 
 const router = express();
 
+const { ClappedArticle, Article } = require("../Models");
+
 // test route
 router.get("/user", (req, res) => {
   if (req.session && req.session.user) {
@@ -11,8 +13,10 @@ router.get("/user", (req, res) => {
   }
 });
 
-router.get("/", (req, res) => {
-  res.status(200).render("pages/home", { user: req.session.user });
+router.get("/", async (req, res) => {
+  const mostBookRows = await ClappedArticle.findMostClappedBook();
+  const recentBooksRows = await Article.findRecentBooks();
+  res.status(200).render("pages/home", { user: req.session.user, mostBook: mostBookRows.rows[0], recentBooks: recentBooksRows.rows });
 });
 
 router.get("/login", (req, res) => {
@@ -21,6 +25,10 @@ router.get("/login", (req, res) => {
 
 router.get("/register", (req, res) => {
   res.status(200).render("pages/register", { user: req.session.user });
+});
+
+router.get("/details/:id", (req, res) => {
+  res.status(200).render("pages/details", { user: req.session.user });
 });
 
 exports.default = router;
