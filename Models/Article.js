@@ -29,4 +29,9 @@ Article.findByAuthorId = function (id) {
   return doQuery("select * from articles where author_id = $1; ", params);
 };
 
+Article.findRecentBooks = function () {
+  const params = [];
+  return doQuery("select * from articles order by id desc limit 2;", params);
+};
+
 exports.default = Article;

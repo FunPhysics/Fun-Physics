@@ -9,7 +9,7 @@
 main{
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+   
 
 }
 
@@ -42,6 +42,24 @@ header{
     width: 100px;
     height: 75px;
     align-self: center;
+}
+#welcome{
+    align-self: center;
+    font-family: 'Righteous', cursive;
+    font-size: 18px;
+    padding: 5px;
+    color: #d62374;
+    border :2px solid white;
+    display: inline-block;
+    border-radius: 5px;
+    
+    
+}
+#top-section{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    
 }
 #login{
     margin-top:15px;
@@ -82,12 +100,7 @@ li a {
 
 
 }
-main{
-   
-   
-    background-color:white;
-    
-}
+
 li a:hover{
     color:	black;
 }
@@ -282,7 +295,11 @@ border-radius: 50%;
     margin: 2%;}
 } */
 /* ===============================register================= */
-
+#register-main{
+    background-image:  url("../images/form4.jpg");
+    background-size: 100%;
+   
+}
 #register-card{
     display: flex;
     flex-direction: column;
@@ -293,9 +310,8 @@ border-radius: 50%;
       padding: 10px;
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
-     /* background-color: rgba(255, 2525 2525 0.25); */
-      background: rgb(238,174,202);
-      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+     background-color: white;
+     
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
@@ -311,11 +327,11 @@ border-radius: 50%;
       align-items: center;
   }
   #register-form label{
-      font-family: 'Audiowide', cursive;
+      font-family: 'times new roman';
       padding: 5px;
       font-weight: 700;
       font-size: large;
-      color: white;
+      color: #d62374;
       letter-spacing: 2px;
   
   }
@@ -324,11 +340,11 @@ border-radius: 50%;
       padding: 4px;
   }
   #register-card h4{
-  color: white;
+  color: #d62374;
   font-weight: 700;
   font-size: larger;
-  font-family: 'Cabin Sketch', cursive;
-  border: 10px white ridge;
+  font-family: 't';
+  border: 10px #d62374 solid;
   padding: 15px;
   }
   #regBtn {
@@ -340,7 +356,12 @@ border-radius: 50%;
       padding: 8px;
       width: 160px;
   }
-
+/* ======================login================================ */
+#login-main{
+    background-image:  url("../images/form4.jpg");
+    background-size: 100%;
+   
+}
   #login-card{
     display: flex;
     flex-direction: column;
@@ -351,9 +372,8 @@ border-radius: 50%;
       padding: 10px;
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
-     /* background-color: rgba(255, 2525 2525 0.25); */
-     background: rgb(238,174,202);
-     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+     background-color: white;
+    
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
@@ -369,11 +389,11 @@ border-radius: 50%;
       align-items: center;
   }
   #login-form label{
-      font-family: 'Audiowide', cursive;
+      font-family: 'times new roman';
       padding: 5px;
       font-weight: 700;
       font-size: large;
-      color: white;
+      color: #d62374;
       letter-spacing: 2px;
   
   }
@@ -382,11 +402,11 @@ border-radius: 50%;
       padding: 4px;
   }
   #login-card h4{
-  color: white;
+  color: #d62374;
   font-weight: 700;
   font-size: larger;
-  font-family: 'Cabin Sketch', cursive;
-  border: 10px white ridge;
+  font-family: 't';
+  border: 10px #d62374 solid;
   padding: 15px;
   border-radius: 10;
   }
@@ -400,7 +420,7 @@ border-radius: 50%;
       padding: 8px;
       width: 160px;
   }
-
+/* =========================================Add Article page ===================== */
   #add-div {
       
       display: flex;
@@ -411,6 +431,10 @@ border-radius: 50%;
       min-height: 100vh;
       margin:auto;
 
+      background-image: url("../images/form4.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+
   }
   #add-article {
     display: flex;
@@ -418,7 +442,7 @@ border-radius: 50%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: blueviolet;
+    background-color:white;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px -15px 20px rgb(3 6 58 / 55%);
@@ -433,9 +457,23 @@ border-radius: 50%;
       display: flex;
       flex-direction: column;
       padding-right: 30px;
-      justify-content: space-between;
+      justify-content: flex-start;
       text-align: center;
       
+  }
+  #add-right{
+      border-radius: 10px;
+      background-color: wheat;
+  }
+  #add-right img{
+      height: 200px;
+      width: 100px;
+
+  }
+  #publish-btn{
+      background-color: #74d623;
+      color: white;
+      align-self: center;
   }
   .add-article{
     width: 15%;
