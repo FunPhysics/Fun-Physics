@@ -9,12 +9,12 @@
 main{
     display: flex;
     flex-direction: column;
-   
+
 
 }
 
 header{
-  
+
     width: 100%;
     height: 75px;
     display: flex;
@@ -52,14 +52,14 @@ header{
     border :2px solid white;
     display: inline-block;
     border-radius: 5px;
-    
-    
+
+
 }
 #top-section{
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
-    
+
 }
 #login{
     margin-top:15px;
@@ -139,11 +139,11 @@ li a:hover{
     text-align: center;
 }
 #daily-image img {
- 
+
     height: 100%;
     width: 100%;
-   
-   
+
+
 
 }
 .home-body{
@@ -164,9 +164,9 @@ li a:hover{
     justify-items: center;
     display: flex;
     flex-direction: column;
-    
 
-    
+
+
 }
 .card-article h1{
     height: 50px;
@@ -175,10 +175,10 @@ li a:hover{
     line-height: 2;
     color:#d62374 ;
     font-family: 'Cabin Sketch', cursive;
-    
+
 }
 .card-article img{
-    
+
     float: left;
     border-radius: 50%;
     width:200px;
@@ -186,7 +186,7 @@ li a:hover{
     margin-right:15px;
     margin-left: 15px;
 
-   
+
 }
 
 
@@ -208,7 +208,7 @@ li a:hover{
     border :2px solid white;
     padding: 8px;
     text-align: center;
-   
+
     height: 30px;
     border-radius: 6px;
 }
@@ -227,24 +227,24 @@ border-radius: 50%;
      box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
    /* background-color: #cec4de; */
    background-color: white;
-   
+
    box-sizing: content-box;
    overflow:scroll;
-    
-    
+
+
 }
 .article-preview div{
     width: 90%;
     height: 200px;
-    
+
     display: flex;
     box-sizing: content-box;
     overflow: hidden;
     margin: 5%;
     border-radius: 3px;
-    
-  
-   
+
+
+
 }
 .article-preview div p {
     font-size: 18px;
@@ -252,16 +252,16 @@ border-radius: 50%;
     margin: 3px 25px 0px 25px;
     overflow: hidden;
 
-   
-   
-    
+
+
+
 }
 
 .article-preview div img{
     width: 100%;;
     height: 80%;
-   
-    
+
+
 }
 
  .sub-article{
@@ -270,7 +270,7 @@ border-radius: 50%;
   justify-items: center;
   align-items: center;
   padding: 4px;
-   
+
 }
 .sub-article a {
     padding-bottom: 8px;
@@ -285,8 +285,8 @@ border-radius: 50%;
 .sub-article h2{
     padding: 3px;
     background-color: white
-  
-    
+
+
 }
 /*.sub-article p{
     height: 70px;
@@ -298,7 +298,7 @@ border-radius: 50%;
 #register-main{
     background-image:  url("../images/form4.jpg");
     background-size: 100%;
-   
+
 }
 #register-card{
     display: flex;
@@ -311,12 +311,12 @@ border-radius: 50%;
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
      background-color: white;
-     
+
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
       align-items: center;
-  
+
   }
 
   #register-form {
@@ -333,7 +333,7 @@ border-radius: 50%;
       font-size: large;
       color: #d62374;
       letter-spacing: 2px;
-  
+
   }
   #register-form input{
       border-radius: 5px;
@@ -348,11 +348,11 @@ border-radius: 50%;
   padding: 15px;
   }
   #regBtn {
-  
+
       border-radius: 5px;
       background-color: rgba(255, 2525 2525 0.25);
       color:black;
-     
+
       padding: 8px;
       width: 160px;
   }
@@ -360,7 +360,7 @@ border-radius: 50%;
 #login-main{
     background-image:  url("../images/form4.jpg");
     background-size: 100%;
-   
+
 }
   #login-card{
     display: flex;
@@ -373,12 +373,12 @@ border-radius: 50%;
       margin-top: 100px;
        box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
      background-color: white;
-    
+
       margin-left: auto;
       margin-right: auto;
       justify-content: center;
       align-items: center;
-  
+
   }
 
   #login-form {
@@ -395,7 +395,7 @@ border-radius: 50%;
       font-size: large;
       color: #d62374;
       letter-spacing: 2px;
-  
+
   }
   #login-form input{
       border-radius: 5px;
@@ -411,18 +411,18 @@ border-radius: 50%;
   border-radius: 10;
   }
   #loginBtn {
-  
+
       border-radius: 5px;
       background-color: rgba(255, 2525 2525 0.25);
-      
+
       color:black;
-     
+
       padding: 8px;
       width: 160px;
   }
 /* =========================================Add Article page ===================== */
   #add-div {
-      
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -450,8 +450,8 @@ border-radius: 50%;
   #add-form{
       display: flex;
       padding: 40px;
-      
-      
+
+
   }
   #add-left{
       display: flex;
@@ -459,7 +459,7 @@ border-radius: 50%;
       padding-right: 30px;
       justify-content: flex-start;
       text-align: center;
-      
+
   }
   #add-right{
       border-radius: 10px;
@@ -478,7 +478,7 @@ border-radius: 50%;
   .add-article{
     width: 15%;
     height: 15%;
-   
+
     margin: 2% 4% 0% 2%;
     padding: 2%
 
@@ -488,7 +488,7 @@ border-radius: 50%;
     text-align: center;
     padding: 10%;
   }
- 
+
   .articles-section{
     background: rgb(255, 255, 255);
     border-radius: 2%;
@@ -534,7 +534,7 @@ border-radius: 50%;
     font-family: 'Delius', cursive;
 
     margin: 3px 25px 0px 25px;
-   
+
     height: 135px;
     overflow: hidden;
 }
@@ -565,4 +565,3 @@ border-radius: 50%;
       margin-top: 15px;
       border-radius: 5px;
   }
-
