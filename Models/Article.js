@@ -36,7 +36,7 @@ Article.findByAuthorId = function (id) {
 
 Article.findRecentArticles = function () {
   const params = [];
-  return doQuery("select * from articles order by id desc limit 2;", params);
+  return doQuery("select * from articles order by id desc limit 4;", params);
 };
 
 exports.default = Article;
