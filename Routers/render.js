@@ -34,8 +34,13 @@ router.get("/Articles", async (req, res) => {
   res.status(200).render("pages/articles", { user: req.session.user, articles: articles.rows });
 });
 
-router.get("/Details/:id", (req, res) => {
-  res.status(200).render("pages/details", { user: req.session.user });
+router.get("/Details/:id", async (req, res) => {
+  const { id } = req.params;
+  if (!id) res.status(200).send({ msg: "missed required params(id)" });
+  else {
+    const article = await Article.findById(id);
+    res.status(200).render("pages/details", { user: req.session.user, article: article.rows[0] });
+  }
 });
 
 router.get("/Explorespace", (req, res) => {

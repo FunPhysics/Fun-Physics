@@ -17,12 +17,12 @@ Article.prototype.save = function () {
 };
 
 Article.find = function () {
-  return doQuery("select * from articles inner join users on articles.author_id = users.id order by articles.id desc;");
+  return doQuery("select * from users inner join articles on articles.author_id = users.id order by articles.id desc;");
 };
 
 Article.findById = function (id) {
   const params = [id];
-  return doQuery("select * from articles where id = $1; ", params);
+  return doQuery("select * from users inner join articles on articles.author_id = users.id where articles.id = $1; ", params);
 };
 
 Article.findByAuthorId = function (id) {
