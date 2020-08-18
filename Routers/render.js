@@ -41,4 +41,5 @@ router.get("/details/:id", (req, res) => {
 router.get("/explorespace", (req, res) => {
   res.status(200).render("pages/explore-space", { user: req.session.user });
 });
+
 exports.default = router;
