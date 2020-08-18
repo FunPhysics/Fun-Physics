@@ -1,16 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-
-
-
-
-
 main{
     display: flex;
     flex-direction: column;
-
-
 }
 
 header{
@@ -26,6 +19,7 @@ header{
 
 
 }
+
 #logo{
     display: flex;
     flex-direction: row;
@@ -790,3 +784,131 @@ li a:hover{
 #articleMain p{
     text-align: justify
 }
+
+@media only screen and (max-width: 750px) {
+
+    .card-article-section2{
+        border-radius: 15px;
+        width: 43%;
+        height: 500px;
+        margin:0% 2% 4% 5%;
+         box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
+       /* background-color: #cec4de; */
+        background-color: white;
+    
+      }
+      .card-article-section2 img{
+        width: 90%;
+        height: 45%;
+        margin: 2% 5% 2% 5%;
+        align-items: center;
+    
+      }
+    
+.card-article-section2 p{
+    font-size: 18px;
+    font-family: 'Delius', cursive;
+
+    margin: 3px 25px 0px 25px;
+
+    height: 135px;
+    overflow: hidden;
+}
+
+.card-article-section2 h2{
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: 	#54C0F1;
+    font-size: 22px;
+    height: 30px;
+    font-weight:bold;
+    padding: 2px;
+    margin: 6px;
+}
+
+.api-div{
+    background: rgb(255, 255, 255);
+    border-radius: 2%;
+    margin: 2%;
+  }
+   .api-div img{
+    width: 90%;
+    height: 45%;
+    margin: 2% 5% 2% 5%;
+    align-items: center;
+
+  }
+  .api-div{
+    border-radius: 15px;
+    width: 43%;
+    height: 375px;
+    margin:4% 2% 4% 5%;
+     box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
+   /* background-color: #cec4de; */
+    background-color: white;
+    float: left;
+
+  }
+
+  .api-div h1{
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color:#d62374 ;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.api-div p{
+    font-size: 18px;
+    font-family: 'Delius', cursive;
+    margin: 15px 25px 0px 25px;
+    height: 135px;
+    overflow: scroll;
+}
+.api-div h3 {
+    text-align: center;
+}
+
+.article-preview{
+    border-radius: 15px;
+    width: 37%;
+    height: 430px;
+    margin:3% 5% 4% 5%;
+     box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
+   /* background-color: #cec4de; */
+   background-color: white;
+
+   box-sizing: content-box;
+   overflow:scroll;
+
+
+}
+.article-preview div{
+    width: 84%;
+    height: 200px;
+    display: flex;
+    box-sizing: content-box;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 3px;
+    margin-bottom: 20%;
+
+
+}
+.article-preview div p {
+    font-size: 18px;
+    font-family: 'Delius', cursive;
+    margin: 3px 25px 0px 25px;
+
+}
+
+.article-preview div img{
+    width: 100%;;
+    height: 80%;
+
+
+}
+
+
+    } 
