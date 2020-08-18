@@ -719,8 +719,16 @@ li a:hover{
 }
 
 
+
+
 .api-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     background: rgb(255, 255, 255);
+    flex-wrap: wrap;
     border-radius: 2%;
     margin: 2%;
   }
@@ -735,7 +743,7 @@ li a:hover{
    .api-div img{
     width: 90%;
     height: 45%;
-    margin: 2% 5% 2% 5%;
+    /* margin: 2% 5% 2% 5%; */
     align-items: center;
     border-radius: 5%;
 
@@ -753,11 +761,14 @@ li a:hover{
   }
 
   .api-div h1{
-    height: 30px;
-    font-size: 20px;
+    height: 50px;
+    font-size: 18px;
+    padding-top: 3%;
     text-align: center;
+    overflow: scroll;
     color:#d62374 ;
     font-family: 'Nunito', sans-serif;
+    vertical-align: middle;
 
 }
 
@@ -766,10 +777,17 @@ li a:hover{
     font-family: 'Delius', cursive;
     margin: 15px 25px 0px 25px;
     height: 135px;
+    
+    text-overflow: ellipsis; 
+    object-fit: contain;
+    word-break: break-all;
+    overflow: scroll;
+
    
 }
 .api-div h3 {
     text-align: center;
+    overflow: scroll;
 }
 /* ========================================================== */
 #likes-container {
@@ -809,6 +827,9 @@ li a:hover{
     border-radius: 50%;
 
 }
+#articleMain .icon {
+    margin: 0%;
+}
 
 #articleMain p{
     text-align: justify;
@@ -835,3 +856,10 @@ li a:hover{
 /* .explor-main{
     background-image:url("../images/form5.jpg") ;
 } */
+html {
+    overflow:   scroll;
+  }
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+  }
