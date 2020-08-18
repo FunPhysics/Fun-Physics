@@ -16,7 +16,7 @@ ClappedArticle.findByUserId = function (id) {
   return doQuery("select * from clapped_articles inner join articles on clapped_articles.article_id = articles.id where user_id = $1; ", params);
 };
 
-ClappedArticle.findMostClappedBook = function () {
+ClappedArticle.findMostClappedArticle = function () {
   const params = [];
   return doQuery("select users.first_name as author_first_name, users.last_name  author_last_name,articles.*, count from articles inner join users on articles.author_id = users.id inner join (select article_id, count(*) as count from clapped_articles group by article_id order by count desc limit 1) as clappedArticle on clappedArticle.article_id = articles.id;", params);
 };

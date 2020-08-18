@@ -2,21 +2,22 @@
 const { doQuery } = global;
 
 function Article({
-  id, title, description, author_id,
+  id, title, description, author_id, img_url,
 }) {
   this.id = id;
   this.title = title;
   this.description = description;
+  this.img_url = img_url;
   this.author_id = author_id;
 }
 
 Article.prototype.save = function () {
-  const params = [this.title, this.description, this.author_id];
-  return doQuery("INSERT INTO articles(title, description, author_id) values($1,$2, $3) returning id;", params);
+  const params = [this.title, this.description, this.img_url, this.author_id];
+  return doQuery("INSERT INTO articles(title, description, img_url, author_id) values($1,$2,$3,$4) returning id;", params);
 };
 
 Article.find = function () {
-  return doQuery("select * from articles;");
+  return doQuery("select * from articles inner join users on articles.author_id = users.id;");
 };
 
 Article.findById = function (id) {
@@ -29,7 +30,7 @@ Article.findByAuthorId = function (id) {
   return doQuery("select * from articles where author_id = $1; ", params);
 };
 
-Article.findRecentBooks = function () {
+Article.findRecentArticles = function () {
   const params = [];
   return doQuery("select * from articles order by id desc limit 2;", params);
 };

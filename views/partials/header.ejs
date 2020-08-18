@@ -1,59 +1,62 @@
 <div id='top-section'>
-        
-   
-   
+
+
+
       <% if (user) { %>
       <div id="welcome">
-        
+
           you're welcome <%= user.first_name+" "+user.last_name
-          %> 
+          %>
            <a class="login" href="/auth/logout">logout</a>
       </div>
-      
+
       <% } else { %>
-       
+
         <div  id="login">
-       <a class="login" href="/login">Login</a>
+       <a class="login" href="/Login">Login</a>
         <br>
-         <a class="login" href="/register">Sign up</a>
+         <a class="login" href="/Register">Sign up</a>
         <% } %>
     </div>
   </div>
-  
+
   <nav>
     <ul>
       <li>
-        
+
         <a href="/">  Home</a>
       </li>
       <li>
-        <a href="/articles"> Articles</a>
-       
+        <a href="/Articles"> Articles</a>
+
       </li>
       <li>
-        <a href="/explorespace"> Explore space</a>
-      
+        <a href="/Explorespace"> Explore space</a>
+
       </li>
       <li>
         <a href="#"> Q&A</a>
-        
+
       </li>
       <!-- <li>
         <a href="#"> Contributors</a>
-        
+
       </li>
       <li>
         <a href="#"> Contribute with us </a>
-       
+
       </li>
       <li>
         <a href="#"> Contact us</a>
-        
-      </li> -->
+
+      </li> router.get("/Add-Article", (req, res) => {
+  res.status(200).render("pages/Add", { user: req.session.user });
+});
+-->
     </ul>
   </nav>
   <div id="logo">
     <img src="../images/atom.gif" alt="oops" >
     <h1>Fun Physics</h1>
-    
-  </div> 
+
+  </div>
