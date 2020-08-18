@@ -57,7 +57,22 @@ header{
 }
 #top-article-section{
     margin: 0% 0% 5% 0%;
+    box-sizing: content-box;
+   
 
+}
+#top-article-section p {
+    overflow: hidden;
+    height: 250px;
+    text-align: left;
+    text-indent: 5px;
+
+}
+#top-article-section h1 {
+    margin-top: 5px;
+}
+#top-article-section h3 {
+    margin-left: 30%;
 }
 #top-section{
     display: flex;
