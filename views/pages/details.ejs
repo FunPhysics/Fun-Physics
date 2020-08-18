@@ -9,13 +9,13 @@
   <header>
     <%- include('../partials/header') %>
   </header>
-  <main>
+  <main class="main-detalis">
  <nav id="articleMain" >
-   <div>
+   <div class="img">
    <img id="img_url" src="<%= article.img_url %>" alt="" >
   </div>
    <p id="description"><%= article.description %></p>
-<hr>
+
 <% if(user) { %>
   <div id="likes-container" style="justify-content: center; margin-left: 30%;">
     <img class='icon' id="like" src="<%= !article.isclapped ? 'https://img.icons8.com/nolan/64/facebook-like.png' : 'https://img.icons8.com/nolan/64/thumbs-down.png' %>"/>
