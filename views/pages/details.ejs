@@ -10,8 +10,10 @@
     <%- include('../partials/header') %>
   </header>
   <main>
- <nav id="articleMain" style="margin: 50px; text-justify:center;font-size: 22px;">
-   <img id="img_url" src="<%= article.img_url %>" alt="" style="float: left; width: 300px; height: 300px;">
+ <nav id="articleMain" >
+   <div>
+   <img id="img_url" src="<%= article.img_url %>" alt="" >
+  </div>
    <p id="description"><%= article.description %></p>
 <hr>
 <% if(user) { %>
