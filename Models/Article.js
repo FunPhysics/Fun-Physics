@@ -20,9 +20,13 @@ Article.find = function () {
   return doQuery("select * from users inner join articles on articles.author_id = users.id order by articles.id desc;");
 };
 
-Article.findById = function (id) {
-  const params = [id];
-  return doQuery("select * from users inner join articles on articles.author_id = users.id where articles.id = $1; ", params);
+Article.findById = function (id, user_id) { // eslint-disable-line
+  if (!user_id) {
+    const params = [id];
+    return doQuery("select * from users inner join articles on articles.author_id = users.id where articles.id = $1; ", params);
+  }
+  const params = [id, user_id];
+  return doQuery("select *, clapped_articles.user_id as isClapped  from users inner join articles on articles.author_id = users.id left outer join clapped_articles on clapped_articles.article_id = articles.id and clapped_articles.user_id = $2 where articles.id = $1;", params);
 };
 
 Article.findByAuthorId = function (id) {
