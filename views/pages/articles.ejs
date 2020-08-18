@@ -11,25 +11,24 @@
     <%- include('../partials/header') %>
   </header>
   <main>
-    
+
     <section class="articles-section">
-      <section class="add-article">
-        <a href="" class="add">add Article</a>
-      </section>
+      <% if(user) { %>
+        <section class="add-article">
+          <a href="/Add-Article" class="add"><img src="https://img.icons8.com/dusk/64/000000/add-property.png"/> Add an article.</a>
+        </section>
+        <% } %>
       <ul>
-        <li class="card-article-section">
-          <img src="../images/cover17.jpg" alt="article-img" srcset="">
-          <h1>Article Title</h1>
-          <h2>author name</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eligendi ad nihil vel delectus. Odit
-            quos fugiat
-            beatae excepturi voluptates ducimus dignissimos dolores harum incidunt cumque, commodi error doloremque
-            porro! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Rerum, voluptatibus omnis! Culpa consequuntur exercitationem
-            temporibus quos veritatis
-            possimus ex natus cumque neque facere, itaque est porro nostrum fugiat delectus fugit.</p>
-          <a href=""><img src="../images/baseline_thumb_up_black_48dp.png" alt="" srcset="" style="width: 50px;height: 50px;"></a>
-        </li>
+
+        <% articles.forEach((article) => { %>
+          <li class="card-article-section">
+            <img src="<%= article.img_url %>" alt="article-img" srcset="">
+            <h1><%= article.title %></h1>
+            <h2><%= article.first_name + " " + article.last_name %></h2>
+            <p><%= article.description %></p>
+            <a href="details/<%= article.id %>">details</a>
+          </li>
+          <% }) %>
 
       </ul>
     </section>

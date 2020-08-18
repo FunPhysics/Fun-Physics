@@ -12,29 +12,29 @@
   </header>
   <main>
     <nav id="daily-image">
-      <img src="../images/cover17.jpg" alt="" style="max-width: 100%;">
+      <img src="../images/cover20.jpg" alt="" style="max-width: 100%;">
     </nav>
     <section class="home-body">
 
       <section class="article-preview">
-        <% recentBooks.forEach((book) => { %>
+        <% recentArticles.forEach((article) => { %>
       <div class="sub-article">
-        <img src='<%= book.img_url %>' alt="">
-          <h2><%= book.title %></h2>
-          <a href='details/<%= book.id %>' >Show Detalis</a>
+        <img src='<%= article.img_url %>' alt="">
+          <h2><%= article.title %></h2>
+          <a href='details/<%= article.id %>' >Show Detalis</a>
       </div>
       <% }); %>
       </section>
 
       <section class="card-article">
-        <% if(mostBook) { %>
+        <% if(mostArticle) { %>
           <section id="top-article-section">
             <div id="image-container">
-              <img src="<%= mostBook.img_url %>" alt="" srcset="">
+              <img src="<%= mostArticle.img_url %>" alt="" srcset="">
             </div>
-            <p><%= mostBook.description %></p>
-            <h3><%= mostBook.author_first_name + " " + mostBook.author_last_name %></h3>
-            <a href='details/<%= mostBook.id %>' >Show Detalis</a>
+            <p><%= mostArticle.description %></p>
+            <h3><%= mostArticle.author_first_name + " " + mostArticle.author_last_name %></h3>
+            <a href='details/<%= mostArticle.id %>' >Show Detalis</a>
           </section>
           <% } else { %>
             <h1><%= "no clapped article" %></h1>
