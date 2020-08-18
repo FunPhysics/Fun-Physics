@@ -14,66 +14,56 @@
     <main>
         <div class="category">
             <select name="category" id="category" style=" color:white; background-color: #d62374; text-indent: 40%; ">
-                <option style=" text-indent: 48%;" value="volvo">Volvo</option>
-                <option  style=" text-indent: 48%;" value="saab">Saab</option>
-         
+              <option></option>
             </select>
         </div>
-        <div class="api-data">
-        <div class="api-div">
-            <img src="../images/cover17.jpg" alt="" srcset="">
-            <h1>title</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quam. Repellendus culpa impedit
-                explicabo modi vero maiores rerum pariatur iste amet fuga dolores magnam voluptatibus sequi, doloribus
-                quasi minima veniam.</p>
-            <h3>copyright</h3>
-        </div>
-        <div class="api-div">
-            <img src="../images/cover17.jpg" alt="" srcset="">
-            <h1>title</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quam. Repellendus culpa impedit
-                explicabo modi vero maiores rerum pariatur iste amet fuga dolores magnam voluptatibus sequi, doloribus
-                quasi minima veniam.</p>
-            <h3>copyright</h3>
-        </div>
-
-        <div class="api-div">
-            <img src="../images/cover17.jpg" alt="" srcset="">
-            <h1>title</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quam. Repellendus culpa impedit
-                explicabo modi vero maiores rerum pariatur iste amet fuga dolores magnam voluptatibus sequi, doloribus
-                quasi minima veniam.</p>
-            <h3>copyright</h3>
-        </div>
-
-        <div class="api-div">
-            <img src="../images/cover17.jpg" alt="" srcset="">
-            <h1>title</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quam. Repellendus culpa impedit
-                explicabo modi vero maiores rerum pariatur iste amet fuga dolores magnam voluptatibus sequi, doloribus
-                quasi minima veniam.</p>
-            <h3>copyright</h3>
-        </div>
-
-        <div class="api-div">
-            <img src="../images/cover17.jpg" alt="" srcset="">
-            <h1>title</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quam. Repellendus culpa impedit
-                explicabo modi vero maiores rerum pariatur iste amet fuga dolores magnam voluptatibus sequi, doloribus
-                quasi minima veniam.</p>
-            <h3>copyright</h3>
-        </div>
-        
-        <div class="api-div">
-            <img src="../images/cover17.jpg" alt="" srcset="">
-            <h1>title</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quam. Repellendus culpa impedit
-                explicabo modi vero maiores rerum pariatur iste amet fuga dolores magnam voluptatibus sequi, doloribus
-                quasi minima veniam.</p>
-            <h3>copyright</h3>
-        </div>
-    </div>
+        <div id="api-data" class="api-data"></div>
     </main>
+
+    <script>
+    const select =  document.getElementById("category");
+
+      fetch("/space/keywords")
+      .then((resp) => resp.json())
+      .then((response) => {
+        response.data.forEach((e, i) => {
+          const optionElement = document.createElement("option");
+          optionElement.innerText = e;
+          optionElement.value = e;
+          select.appendChild(optionElement);
+        })
+      });
+
+      select.addEventListener("change", (data) => {
+        if (select.value){
+          fetch(`/space?SearchName=${select.value}`)
+          .then((resp) => resp.json())
+          .then((response) => {
+            document.getElementById("api-data").innerHTML = "";
+            for (var i = 0; i < 10; i++) {
+              const { date, url, title, description } = response[i];
+              document.getElementById("api-data").appendChild(createApiDiv(date, url, title, description));
+            }
+          });
+        }
+      })
+
+      function createApiDiv(date, url, title, description) {
+        const apiDiv = document.createElement("div");
+        apiDiv.classList.add("api-div");
+        const imgElement = document.createElement("img");
+        imgElement.src = url;
+        const titleElement = document.createElement("h1");
+        titleElement.innerText = title;
+        const descriptionElement = document.createElement("p");
+        descriptionElement.innerText = description;
+        apiDiv.appendChild(imgElement);
+        apiDiv.appendChild(titleElement);
+        apiDiv.appendChild(descriptionElement);
+        return apiDiv;
+      }
+
+    </script>
 
 </body>
 
