@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+
 main{
     display: flex;
     flex-direction: column;
@@ -99,12 +100,14 @@ li{
     background-color: #d62374;
     border :2px solid white;
     border-radius: 5px;
-    padding:10px 5px 0px 5px;
+    padding:10px 5px 5px 5px;
     text-decoration: none;
     text-align: center;
     height: 30px;
     width: 50px;
     margin-right: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    
 
 }
 li a {
@@ -183,10 +186,19 @@ li a:hover{
     justify-items: center;
     display: flex;
     flex-direction: column;
-
-
-
+    transition:all 0.3s ease;
 }
+.card-article:hover
+{
+        background:#aed0ec;
+}
+.sub-article:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
 .card-article h1{
     height: 50px;
     font-size: 35px;
@@ -219,7 +231,7 @@ li a:hover{
 .card-article h3{
     text-align: center;
     font-family: 'Crimson Text', serif;
-    color: 	#54C0F1;
+    color: 	#4d4d4d;
     font-size: 22px;
     height: 30px;
     font-weight:bold;
@@ -282,6 +294,7 @@ li a:hover{
 .article-preview div img{
     width: 100%;;
     height: 80%;
+    border-radius: 5px;
 
 
 }
@@ -329,11 +342,11 @@ li a:hover{
     flex-direction: column;
       border-radius: 15px;
       width: 50%;
-      height: 400px;
+      height: 550px;
       justify-content: center;
-      padding: 10px;
+      padding: 2px;
       margin-top: 100px;
-       box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
+      box-shadow: 0px 10px 20px rgb(3 6 58 / 55%);
      background-color: white;
 
       margin-left: auto;
@@ -351,41 +364,48 @@ li a:hover{
       align-items: center;
   }
   #register-form label{
-      font-family: 'times new roman';
-      padding: 5px;
-      font-weight: 700;
-      font-size: large;
-      color: #d62374;
-      letter-spacing: 2px;
+    font-family: sans-serif;
+    padding: 13px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #d62374;
+    letter-spacing: 2px;
 
   }
-  #register-form input{
-      border-radius: 5px;
-      padding: 4px;
+  .btn-form{
+    border-radius: 5px;
+    padding: 6px;
+    width: 299px;
+    height: 30px;
   }
   #register-card h4{
-    color: 	#54C0F1;
+    color: #54C0F1;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-decoration: none;
     transition: background 0.3s ease 0s, color 0.3s ease 0s;
-  font-weight: 700;
-  font-size: larger;
-  font-family: 't';
- 
-  padding: 15px;
+    font-weight: 700;
+    font-size: 29px;
+    font-family: sans-serif;
+    margin-top: 5%
   }
-  #regBtn {
+  .btn-submit {
+    text-decoration: none;
+    color: white;
+    background-color: #74d623;
+    border: 2px solid white;
+    padding: 8px;
+    text-align: center;
+    /* margin-left: 1%; */
+    height: 50px;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 20px;
 
-      border-radius: 5px;
-      background-color: #74d623;
-      color:white;
-
-      padding: 8px;
-      width: 160px;
   }
+  
 /* ======================login================================ */
 #login-main{
     background-image:  url("../images/form4.jpg");
@@ -401,7 +421,7 @@ li a:hover{
       justify-content: center;
       padding: 10px;
       margin-top: 100px;
-       box-shadow: -50px 50px 20px rgb(3 6 58 / 55%);
+       box-shadow: 0px 10px 20px rgb(3 6 58 / 55%);
      background-color: white;
 
       margin-left: auto;
@@ -419,43 +439,44 @@ li a:hover{
       align-items: center;
   }
   #login-form label{
-      font-family: 'times new roman';
-      padding: 5px;
-      font-weight: 700;
-      font-size: large;
-      color: #d62374;
-      letter-spacing: 2px;
+    font-family: sans-serif;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #d62374;
+    letter-spacing: 2px;
 
   }
-  #login-form input{
-      border-radius: 5px;
-      padding: 4px;
-  }
+  /* #login-form input{
+    border-radius: 5px;
+    padding: 6px;
+    width: 299px;
+    height: 36px;
+  } */
   #login-card h4{
-    color: 	#54C0F1;
-    font-family: 'Roboto Condensed', sans-serif;
+    color: #54C0F1;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-decoration: none;
     transition: background 0.3s ease 0s, color 0.3s ease 0s;
-  font-weight: 700;
-  font-size: larger;
-  font-family: 't';
- 
-  padding: 15px;
-  border-radius: 10;
+    font-weight: 700;
+    font-size: 29px;
+    font-family: sans-serif;
   }
-  #loginBtn {
+  /* #loginBtn {
 
-      border-radius: 5px;
-      background-color: #74d623;
-
-      color:white;
-
-      padding: 8px;
-      width: 160px;
-  }
+    text-decoration: none;
+    color: white;
+    background-color: #74d623;
+    border :2px solid white;
+    padding: 8px;
+    text-align: center;
+    margin-left: 1%;
+    height: 30px;
+    border-radius: 6px;
+} */
+  
 /* =========================================Add Article page ===================== */
   #add-div {
 
@@ -670,12 +691,11 @@ li a:hover{
 
   .category{
 
-    background-color: white;
-    /* width: ; */
     height: 60px;
     text-align: center;
     justify-items: center;
     justify-content: center;
+    margin-top: 1%;
 }
 .categort select {
     text-align: center;
@@ -696,7 +716,7 @@ li a:hover{
 }
 
 
-.api-div{
+/* .api-div{
     background: rgb(255, 255, 255);
     border-radius: 2%;
     margin: 2%;
@@ -709,11 +729,12 @@ li a:hover{
       height: 30%;
   }
    */
-   .api-div img{
+  /* .api-div img{
     width: 90%;
     height: 45%;
     margin: 2% 5% 2% 5%;
     align-items: center;
+    border-radius: 5%;
 
   }
   .api-div{
@@ -722,7 +743,7 @@ li a:hover{
     height: 400px;
     margin:4% 2% 4% 5%;
      box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
-   /* background-color: #cec4de; */
+  
     background-color: white;
     float: left;
 
@@ -742,6 +763,64 @@ li a:hover{
     font-family: 'Delius', cursive;
     margin: 15px 25px 0px 25px;
     height: 135px;
+   
+}
+.api-div h3 {
+    text-align: center;
+} */
+
+.api-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background: rgb(255, 255, 255);
+    border-radius: 2%;
+    margin: 2%;
+  }
+ /* .articles-section ul{
+      width: 100%;
+      height: 100%;
+  }
+  .articles-section ul li{
+      height: 30%;
+  }
+   */
+   .api-div img{
+    width: 90%;
+    height: 45%;
+    /* margin: 2% 5% 2% 5%; */
+    align-items: center;
+    border-radius: 5%;
+  }
+  .api-div{
+    border-radius: 15px;
+    width: 25%;
+    height: 450px;
+    margin:4% 2% 4% 5%;
+     box-shadow: 0px 3px 20px rgb(3 6 58 / 55%);
+   /* background-color: #CEC4DE; */
+    background-color: white;
+    float: left;
+  }
+  .api-div h1{
+    height: 50px;
+    width: 90%;
+    overflow: scroll;
+    font-size: 18px;
+    text-align: center;
+    color:#d62374 ;
+    font-family: 'Nunito', sans-serif;
+}
+.api-div p{
+    font-size: 18px;
+    font-family: 'Delius', cursive;
+    margin: 15px 25px 0px 25px;
+    height: 135px;
+    text-overflow: ellipsis;
+    object-fit: contain;
+    word-break: break-all;
     overflow: scroll;
 }
 .api-div h3 {
@@ -752,9 +831,12 @@ li a:hover{
     visibility: hidden;
 }
 #articleMain{
-    margin: 50px;
-     text-justify:center;
+    margin: 10%;
+    text-justify: center;
     font-size: 22px;
+    background-color: white;
+    height: 90%;
+    width: 80%;
 }
 #articleMain .icon{
     visibility: visible;
@@ -776,12 +858,15 @@ li a:hover{
 }
 
 #articleMain div img{
+    width: 90%;
+    margin: -29% 17% 5% 107%;
+    height: 85%;
+    border-radius: 50%;
 
-    width: 80%;
-    height: 80%;
 }
 
 #articleMain p{
+
     text-align: justify
 }
 
@@ -912,3 +997,40 @@ li a:hover{
 
 
     } 
+
+    text-align: justify;
+    float: left;
+    margin: -12% 2% 2% 2%;
+}
+.main-detalis{
+    background-image:url("../images/form4.jpg") ;
+}
+
+.api-div:hover{
+    background-color: rgb(233, 233, 233);
+}
+.api-div img:hover
+{
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+       
+        border-radius:10%;
+       
+}
+
+/* .explor-main{
+    background-image:url("../images/form5.jpg") ;
+} */
+
+html {
+    overflow:   scroll;
+  }
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+  }
+
+  #articleMain .icon {
+    margin: 0%;
+}

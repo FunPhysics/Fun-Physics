@@ -54,7 +54,9 @@ POST /articles var payload = { title, description } return res.status(201);
 ```javascript
 GET /clappedArticles/userId/:id var payload = { } return [clapped_articles[user_id=id]];
 
-POST /clappedArticles/userId/:id var payload = { article_id } res.status(201);
+POST /clappedArticles var payload = { article_id } res.status(201);
+
+DELETE /clappedArticles/articleId/:id var payload = { } res.status(201);
 ```
 
 ### questions

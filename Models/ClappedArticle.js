@@ -11,6 +11,11 @@ ClappedArticle.prototype.save = function () {
   return doQuery("INSERT INTO clapped_articles(article_id, user_id) values($1,$2)", params);
 };
 
+ClappedArticle.prototype.remove = function () {
+  const params = [this.article_id, this.user_id];
+  return doQuery("delete from clapped_articles where article_id=$1 and user_id=$2", params);
+};
+
 ClappedArticle.findByUserId = function (id) {
   const params = [id];
   return doQuery("select * from clapped_articles inner join articles on clapped_articles.article_id = articles.id where user_id = $1; ", params);

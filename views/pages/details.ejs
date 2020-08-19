@@ -9,21 +9,83 @@
   <header>
     <%- include('../partials/header') %>
   </header>
-  <main>
+  <main class="main-detalis">
  <nav id="articleMain" >
-   <div>
+   <div class="img">
    <img id="img_url" src="<%= article.img_url %>" alt="" >
   </div>
    <p id="description"><%= article.description %></p>
-<hr>
+
 <% if(user) { %>
   <div id="likes-container" style="justify-content: center; margin-left: 30%;">
-    <img class='icon' id="like" src="<%= !article.isclapped ? 'https://img.icons8.com/nolan/64/facebook-like.png' : 'https://img.icons8.com/nolan/64/thumbs-down.png' %>"/>
+    <img class='icon' onclick="a(this.src);" id="like" src="<%= !article.isclapped ? 'https://img.icons8.com/nolan/64/facebook-like.png' : 'https://img.icons8.com/nolan/64/thumbs-down.png' %>"/>
   </div>
   <% } %>
 
  </nav>
 
   </main>
+
+  <script>
+  function a(src){
+    const article_id = window.location.href.substring(window.location.href.lastIndexOf("/")+1);
+    const doLike = src.endsWith("like.png");
+
+    if (doLike){ // do like
+      doLikeFn(article_id).then(() => {
+        document.getElementById("like").src = "https://img.icons8.com/nolan/64/thumbs-down.png";
+      }).catch((e) => {
+        alert(e.message);
+      })
+    } else { // do unlike
+      doUnLikeFn(article_id).then(() => {
+        document.getElementById("like").src = "https://img.icons8.com/nolan/64/facebook-like.png";
+      }).catch((e) => {
+        alert(e.message);
+      })
+    }
+  }
+
+  function doLikeFn(article_id){
+    return new Promise((resolve, reject) => {
+      fetch("/clappedArticles", {
+        method: "post",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ article_id }),
+      })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.success){
+          console.log("liked");
+          resolve();
+        } else {
+          reject(new Error(response.msg));
+        }
+      })
+    })
+  }
+
+  function doUnLikeFn(article_id){
+    return new Promise((resolve, reject) => {
+      fetch(`/clappedArticles/articleId/${article_id}`, {
+        method: "delete"
+      })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.success){
+          console.log("unliked");
+          resolve();
+        } else {
+          reject(new Error(response.msg));
+        }
+      })
+    })
+  }
+
+  </script>
+
 </body>
 </html>
